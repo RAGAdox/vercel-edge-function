@@ -1,7 +1,11 @@
-export const config = {
-  runtime: "edge",
-};
+import type { VercelRequest, VercelResponse } from "@vercel/node";
 
-export default async function handler(request: Request) {
-  return new Response(`Hello from ${process.env.VERCEL_REGION}`);
+export default function handler(
+  request: VercelRequest,
+  response: VercelResponse
+) {
+  const { name = "World" } = request.query;
+  return response.json({
+    message: `Hello ${name}!`,
+  });
 }

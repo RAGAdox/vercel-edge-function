@@ -5,10 +5,11 @@
   "type": "module",
   "license": "MIT",
   "scripts": {
-    "build":"tsc"
+    "build": "tsc"
   },
   "devDependencies": {
     "@types/node": "^22.10.10",
+    "@vercel/node": "^5.0.2",
     "typescript": "^5.7.3"
   }
 }
